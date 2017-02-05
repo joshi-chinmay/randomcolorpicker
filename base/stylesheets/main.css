@@ -31,14 +31,7 @@ html, body {
 .divide-in-7 {
   width: 100% !important;
   height: 14.2857143% !important;
-  opacity: 0.6;
-}
-
-.bg-black{
-  background-color: black !important;
-}
-.bg-white{
-  background-color: white !important;
+  opacity: 0.55;
 }
 .bg-red {
   background-color: red !important;
@@ -62,16 +55,31 @@ html, body {
   background-color: violet !important;
 }
 
-.fc-black {
-  color: black !important
+.fc-black{
+  color: #000000 !important;
 }
-.fc-white {
-color: white !important
+.fc-white{
+  color: #ffffff !important;
 }
 
 .in-front-of-the-wall {
   z-index: 1;
   margin: 0;
+}
+.div-center {
+  margin: 0;
+  opacity: 0.7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+}
+.div-center span {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .change-background {
@@ -85,7 +93,13 @@ color: white !important
   top: 50%;
   left: 50%;
   margin-right: -50%;
-  font-size: 60px;
+  font-size: 49px;
   transform: translate(-50%, -50%);
   letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 500px) {
+  .div-center {
+    font-size: 25px;
+  }
 }
