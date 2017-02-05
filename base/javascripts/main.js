@@ -51,9 +51,11 @@ var doTheMagic = function doTheMagic() {
   if( awesomeColor != undefined || awesomeContrastColor != undefined ){
     $(".change-background").css("background-color", awesomeColor);
     $(".color-name").css("color", awesomeContrastColor).text(awesomeColor);
+    $(document).attr("title", awesomeColor);
   } else {
     $(".colorful-awesomeness").show();
     $(".single-color-awesomeness").removeClass("visible").addClass("invisible");
+    $(document).attr("title", "Random color generator");
   }
 }
 
