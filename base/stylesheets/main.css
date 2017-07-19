@@ -103,3 +103,16 @@ html, body {
     font-size: 25px;
   }
 }
+
+
+.minus {
+  float: left;
+  padding-right: 25px;
+}
+.plus {
+  float: right;
+  padding-left: 25px;
+}
+.plus, .minus {
+  cursor: pointer;
+}
