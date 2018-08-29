@@ -32,6 +32,8 @@ $(document).ready(function() {
       dummyTextArea.select();
       document.execCommand("copy");
       document.body.removeChild(dummyTextArea);
+      $(".double-click-to-copy").addClass("blink");
+      $(".double-click-to-copy").text("color was copied to clipboard.");
     }
   });
 
@@ -58,7 +60,9 @@ $(document).on('click touch', function () {
 });
 
 $(document).keypress(function(event) {
-  if(event.which == '13'){
+  if(event.which == '13') {
+    $(".double-click-to-copy").removeClass("blink");
+    $(".double-click-to-copy").text("double click anywhere to copy the color");
     doTheMagic();
   }
 });
