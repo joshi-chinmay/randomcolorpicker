@@ -69,3 +69,8 @@ var updateTextAndColor = function(color) {
   $(".changed-hex").text(color);
   $(document).attr("title", color);
 }
+
+var setMessageDefault = function() {
+  $(".double-click-to-copy").removeClass("blink");
+  $(".double-click-to-copy").text("double click anywhere to copy the color");
+}

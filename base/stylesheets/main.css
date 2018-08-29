@@ -80,7 +80,6 @@ html, body {
   font-size: 48px;
   transform: translate(-50%, -50%);
   letter-spacing: 2px;
-
   user-select: none;
 }
 
@@ -90,6 +89,13 @@ html, body {
   }
 }
 
+.changed-hex {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  margin-left: 56px;
+  margin-right: 56px;
+}
 .minus {
   float: left;
   padding-right: 25px;

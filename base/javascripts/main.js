@@ -11,29 +11,33 @@ $(document).ready(function() {
     $(".welcome-message").text("keep pressing enter");
   }
 
-  $(".plus").click(function(){
+  $(".plus").click(function() {
+    setMessageDefault();
     var updatedColor = colorFader( $(".changed-hex").text(), -0.1);
     updateTextAndColor(updatedColor);
   });
 
-  $(".minus").click(function(){
+  $(".minus").click(function() {
+    setMessageDefault();
     var updatedColor = colorFader( $(".changed-hex").text(), 0.1);
     updateTextAndColor(updatedColor);
   });
 
-  $("body").dblclick(function() {
-    var $selector = $(".changed-hex");
+  $(document).on('dblclick', function (event) {
+    if (!$(event.target).closest('.text-ver-hor-center').length && !$(".single-color-awesomeness").hasClass("invisible") ) {
+      var $selector = $(".changed-hex");
 
-    if( $selector.length === 1 ) {
-      var copyText = $selector.text();
-      var dummyTextArea = document.createElement('textarea');
-      dummyTextArea.value = copyText;
-      document.body.appendChild(dummyTextArea);
-      dummyTextArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(dummyTextArea);
-      $(".double-click-to-copy").addClass("blink");
-      $(".double-click-to-copy").text("color was copied to clipboard.");
+      if( $selector.length === 1 ) {
+        var copyText = $selector.text();
+        var dummyTextArea = document.createElement('textarea');
+        dummyTextArea.value = copyText;
+        document.body.appendChild(dummyTextArea);
+        dummyTextArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummyTextArea);
+        $(".double-click-to-copy").addClass("blink");
+        $(".double-click-to-copy").text("color was copied to clipboard.");
+      }
     }
   });
 
@@ -61,8 +65,7 @@ $(document).on('click touch', function () {
 
 $(document).keypress(function(event) {
   if(event.which == '13') {
-    $(".double-click-to-copy").removeClass("blink");
-    $(".double-click-to-copy").text("double click anywhere to copy the color");
+    setMessageDefault();
     doTheMagic();
   }
 });
