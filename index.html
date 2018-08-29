@@ -1,45 +1,43 @@
 <html>
   <head>
-    <title>Randomness overloaded</title>
+    <title>Random color generator</title>
     <link rel="shortcut icon" href="./essentials/images/color-drop.png" type="image/x-icon" />
 
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Generate random colors on the go">
+    <meta name="keywords" content="Colors,Random Colors,Color generator,Color generators,HTML,CSS,JavaScript">
+    <meta name="author" content="Chinmay Joshi">
 
     <script src="./essentials/javascripts/jquery.js"></script>
+    <script src="./base/javascripts/helpers.js"></script>
     <script src="./base/javascripts/main.js"></script>
+
     <link rel="stylesheet" href="./base/stylesheets/main.css">
   </head>
 
   <body>
     <div class="page-wrapper">
-      <div class="colorful-awesomeness">
-        <div class="behind-the-wall">
-          <div class="divide-in-7 bg-red"></div>
-          <div class="divide-in-7 bg-orange"></div>
-          <div class="divide-in-7 bg-yellow"></div>
-          <div class="divide-in-7 bg-green"></div>
-          <div class="divide-in-7 bg-blue"></div>
-          <div class="divide-in-7 bg-indogo"></div>
-          <div class="divide-in-7 bg-violet"></div>
-        </div>
 
-        <div class="in-front-of-the-wall">
-          <div class="div-center">
-            <span class="welcome-message fc-white">keep pressing 'enter'</span>
-          </div>
-        </div>
+      <div class="welcome-message-container">
+        <span class="welcome-message">keep pressing enter</span>
       </div>
 
       <div class="single-color-awesomeness invisible">
         <div class="change-background">
           <div class="text-ver-hor-center">
             <div class="minus">
-              <span class="color-name">-</span>
+              <span class="color-name"> - </span>
             </div>
             <span class="color-name changed-hex">tap or press spacebar</span>
             <div class="plus">
-              <span class="color-name">+</span>
+              <span class="color-name"> + </span>
             </div>
+          </div>
+
+          <div class="color-name bottom-center double-click-to-copy">
+            double click anywhere to copy the color
           </div>
         </div>
       </div>
