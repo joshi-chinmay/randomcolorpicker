@@ -10,15 +10,21 @@ var doTheMagic = function() {
   var awesomeContrastColor = invertColor(awesomeColor);
 
   if( awesomeColor != undefined || awesomeContrastColor != undefined ) {
-    $(".change-background").css("background-color", awesomeColor);
-    $(".color-name").css("color", awesomeContrastColor);
-    $(".changed-hex").text(awesomeColor);
-    $(document).attr("title", awesomeColor);
+    setColors(awesomeColor, awesomeContrastColor);
   } else {
     $(".welcome-message-container").show();
     $(".single-color-awesomeness").removeClass("visible").addClass("invisible");
     $(document).attr("title", "Random color generator");
+    $(".color-input-control").val("#ffffff");
   }
+}
+
+var setColors = function(awesomeColor, awesomeContrastColor) {
+  $(".change-background").css("background-color", awesomeColor);
+  $(".color-name").css("color", awesomeContrastColor);
+  $(".changed-hex").text(awesomeColor);
+  $(".color-input-control").val(awesomeColor);
+  $(document).attr("title", awesomeColor);
 }
 
 var color = function() {
@@ -67,6 +73,7 @@ var updateTextAndColor = function(color) {
   $(".change-background").css("background-color", color);
   $(".color-name").css("color", awesomeContrastColor);
   $(".changed-hex").text(color);
+  $(".color-input-control").val(color);
   $(document).attr("title", color);
 }
 

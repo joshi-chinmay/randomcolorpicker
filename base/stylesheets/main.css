@@ -58,7 +58,7 @@ html, body {
 
 .welcome-message-container {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -74,7 +74,7 @@ html, body {
 
 .text-ver-hor-center {
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   margin-right: -50%;
   font-size: 48px;
@@ -91,10 +91,8 @@ html, body {
 
 .changed-hex {
   display: inline-block;
-  width: 200px;
   text-align: center;
-  margin-left: 56px;
-  margin-right: 56px;
+  width: 320px;
 }
 .minus {
   float: left;
@@ -108,6 +106,14 @@ html, body {
   cursor: pointer;
 }
 
+.custom-color-picker-note {
+  font-size: 12px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  bottom: 264px;
+  text-align: center;
+}
 .bottom-center {
   font-size: 18px;
   width: 100%;

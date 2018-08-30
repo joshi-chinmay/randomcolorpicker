@@ -23,6 +23,16 @@ $(document).ready(function() {
     updateTextAndColor(updatedColor);
   });
 
+  $(".changed-hex").click(function() {
+    $(".color-input-control").click();
+  });
+
+  $(".color-input-control").change(function(e) {
+    var awesomeColor = e.currentTarget.value;
+    var awesomeContrastColor = invertColor(awesomeColor);
+    setColors(awesomeColor, awesomeContrastColor);
+  });
+
   $(document).on('dblclick', function (event) {
     if (!$(event.target).closest('.text-ver-hor-center').length && !$(".single-color-awesomeness").hasClass("invisible") ) {
       var $selector = $(".changed-hex");
