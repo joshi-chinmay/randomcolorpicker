@@ -1,14 +1,9 @@
-* {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  font-weight: normal;
-  font-stretch: normal;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 html, body {
-  padding: 0 !important;
-  margin: 0 !important;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-stretch: normal;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
 }
 
 .invisible {
@@ -19,110 +14,58 @@ html, body {
 }
 
 .page-wrapper {
-  width: 100%;
   height: 100%;
-  overflow: hidden;
+  position: relative;
+  width: 100%;
 
   background: linear-gradient(150deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   background-size: 1800% 1800%;
 
-  -webkit-animation: rainbow 8s ease infinite;
-  -z-animation: rainbow 8s ease infinite;
-  -o-animation: rainbow 8s ease infinite;
-  animation: rainbow 8s ease infinite;
+  -webkit-animation: rainbow 6s ease infinite;
+  -z-animation: rainbow 6s ease infinite;
+  -o-animation: rainbow 6s ease infinite;
+  animation: rainbow 6s ease infinite;
 }
-
 @-webkit-keyframes rainbow {
-  0% { background-position: 0% 82% }
-  50% { background-position: 100% 19% }
-  100% { background-position: 0% 82% }
+  0% { background-position: 0% 80% }
+  50% { background-position: 100% 20% }
+  100% { background-position: 0% 80% }
 }
-
 @-moz-keyframes rainbow {
-  0% { background-position: 0% 82% }
-  50% { background-position: 100% 19% }
-  100% { background-position: 0% 82% }
+  0% { background-position: 0% 80% }
+  50% { background-position: 100% 20% }
+  100% { background-position: 0% 80% }
 }
-
 @-o-keyframes rainbow {
-  0% { background-position: 0% 82% }
-  50% { background-position: 100% 19% }
-  100% { background-position: 0% 82% }
+  0% { background-position: 0% 80% }
+  50% { background-position: 100% 20% }
+  100% { background-position: 0% 80% }
 }
-
 @keyframes rainbow {
-  0% { background-position :0% 82% }
-  50% { background-position: 100% 19% }
-  100% { background-position :0% 82% }
+  0% { background-position :0% 80% }
+  50% { background-position: 100% 20% }
+  100% { background-position :0% 80% }
 }
 
-.welcome-message-container {
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  font-size: 45px;
+.welcome-message-container, .text-ver-hor-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.welcome-message {
+  font-size: 32px;
   color: #ffffff;
 }
-
-.change-background {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
 .text-ver-hor-center {
-  position: absolute;
-  top: 46%;
-  left: 50%;
-  margin-right: -50%;
-  font-size: 48px;
-  transform: translate(-50%, -50%);
-  letter-spacing: 2px;
-  user-select: none;
+  flex-direction: column;
+  flex-wrap: wrap
 }
-
-@media only screen and (max-width: 500px) {
-  .welcome-message-container {
-    font-size: 24px;
-  }
+.flex-child {
+  margin: auto;
+  margin-left: auto;
 }
-
-.changed-hex {
-  display: inline-block;
-  text-align: center;
-  width: 320px;
-}
-.minus {
-  float: left;
-  padding-right: 25px;
-}
-.plus {
-  float: right;
-  padding-left: 25px;
-}
-.plus, .minus {
-  cursor: pointer;
-}
-
-.custom-color-picker-note {
-  font-size: 12px;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  bottom: 264px;
-  text-align: center;
-}
-.bottom-center {
-  font-size: 18px;
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  bottom: 32px;
-  text-align: center;
-}
-
 .blink {
   animation: blinker 1s linear infinite;
 }
@@ -131,4 +74,19 @@ html, body {
   50% {
     opacity: 0;
   }
+}
+.custom-color-picker-note {
+  margin-bottom: 10px;
+}
+.double-click-to-copy {
+  margin-bottom: 30px;
+}
+.f32 {
+  font-size: 32px;
+}
+.plus, .minus {
+  cursor: pointer;
+  display: inline-block;
+  width: 90px;
+  text-align: center;
 }

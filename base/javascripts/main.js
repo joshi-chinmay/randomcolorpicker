@@ -34,7 +34,7 @@ $(document).ready(function() {
   });
 
   $(document).on('dblclick', function (event) {
-    if (!$(event.target).closest('.text-ver-hor-center').length && !$(".single-color-awesomeness").hasClass("invisible") ) {
+    if( !$(".single-color-awesomeness").hasClass("invisible") ) {
       var $selector = $(".changed-hex");
 
       if( $selector.length === 1 ) {
@@ -68,7 +68,7 @@ $(window).bind('mousewheel DOMMouseScroll', function (event) {
 });
 
 $(document).on('click touch', function () {
-  if(document.isMobile){
+  if(document.isMobile) {
     doTheMagic();
   }
 });
